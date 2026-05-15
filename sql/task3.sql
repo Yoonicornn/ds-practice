@@ -3,6 +3,17 @@
 -- The result should include the category ID, category name, and the total sales amount.
 -- Hint: You may need to use subqueries, joins, and aggregate functions to solve this problem.
 
+-- SELECT 
+--     c.category_id,
+--     c.category_name,
+--     SUM(oi.quantity * oi.unit_price) AS total_sales_amount
+-- FROM Categories c
+-- JOIN Products p ON p.category_id = c.category_id
+-- JOIN Order_Items oi ON oi.product_id = p.product_id
+-- GROUP BY c.category_id, c.category_name
+-- ORDER BY total_sales_amount desc
+-- LIMIT 3;
+
 SELECT
     c.category_id,
     c.category_name,
